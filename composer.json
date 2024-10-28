@@ -1,0 +1,45 @@
+{
+    "name": "biologed/revive-ad-server-api",
+    "description": "Package for access to Api V2 Revive Ad Server",
+    "homepage": "https://github.com/biologed/revive-ad-server-api",
+    "type": "library",
+    "require": {
+        "php": "^8.3",
+        "phpxmlrpc/phpxmlrpc": "4.*",
+        "illuminate/support": "11.*",
+        "nesbot/carbon": "^3.8"
+    },
+    "keywords": [
+        "revive",
+        "adsserver",
+        "api",
+        "xmlrpc"
+    ],
+    "license": "GPL-2.0-or-later",
+    "authors": [
+        {
+            "name": "Biologed",
+            "email": "super.gird2012@yandex.ru"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Biologed\\Revive\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Biologed\\Revive\\ReviveServiceProvider"
+            ],
+            "aliases": {
+                "Revive": "Biologed\\Revive\\Facade"
+            }
+        }
+    },
+    "config": {
+        "platform": {
+            "php": "8.3.8"
+        }
+    }
+}
